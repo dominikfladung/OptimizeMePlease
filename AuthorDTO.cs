@@ -23,6 +23,16 @@ namespace OptimizeMePlease
         public string AuthorNickName { get; set; }
     }
 
+    public sealed class AuthorDTO_OptimizedRecord
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public int Age { get; set; }
+        public string Country { get; set; }
+        public IEnumerable<BookDTO_OptimizedRecord> Books { get; set; }
+    }
+
     public sealed class AuthorDTO_Optimized
     {
         public string FirstName { get; set; }
@@ -46,6 +56,12 @@ namespace OptimizeMePlease
     }
 
     public struct BookDTO_OptimizedStruct
+    {
+        public string Title { get; set; }
+        public int PublishedYear { get; set; }
+    }
+
+    public record BookDTO_OptimizedRecord
     {
         public string Title { get; set; }
         public int PublishedYear { get; set; }
